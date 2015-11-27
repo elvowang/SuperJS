@@ -1,0 +1,33 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="theme.css">
+<script language="javascript" type="text/javascript" src="myscripts.js">
+</script>
+</head>
+
+<body>
+    <span id="header"><h1>Elvo-Notepad</h1>
+        <input type="searchText" placeholder="Search" id="searchText"></input>
+        <button id="search" type="button" onclick="goFunction()">Go</button>
+        <span id="result"></span>
+    </span>
+    
+    <div id="mainbody">
+        <div id="right">
+            <button type="button" onclick="addNoteFunction()">+</button>
+            <section class="list-wrap">  
+        
+                <ul id="list">
+
+                    <span class="empty-item">Notes List</span>
+                </ul>
+            </section>
+        </div>
+        <div id="left">
+            <input id="content" type="textarea"></input>
+        </div>
+    </div>
+</body>
+
+</html>
+ No newline at end of file
