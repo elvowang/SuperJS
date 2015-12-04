@@ -8,7 +8,7 @@
 <body>
 	<span id="header"><h1>Elvo-Notepad</h1>
 		<input type="searchText" placeholder="Search" id="searchText"></input>
-		<button id="search" type="button" onclick="goFunction()">Go</button>
+		<button id="search" type="button" onclick="testPromise()">Go</button>
 		<span id="result"></span>
 	</span>
 	

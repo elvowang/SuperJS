@@ -1,22 +1,9 @@
 'use strict';
 
-//let model= new NotesModel();
-
-//model.add(note, (err, note) => console.log('Note is added');
-
-// let obj = {
-// 	init: function(){
-// 		setTimeout(() =>
-// 		this.addNote(), 1000);
-// 	},
-// 	addNote: function(){}
-// }
-
 function goFunction() {
-	//search();
+
 	let searchTerm = document.getElementById("searchText").value;
 	let range = document.body.textContent && document.body.innerText && document.getElementById("content").value;
-	//let hasWord = range.indexOf(name)!==-1;
 	let amount = 0;
 
 	let lis = document.getElementsByTagName('li');
@@ -28,7 +15,6 @@ function goFunction() {
 		}
 	}
 
-	//display();
 	let searchResult = "You are searching for' " + searchTerm + " ' , in total " + amount + " note(s) contain(s) this result.";
 	document.getElementById("result").innerHTML = searchResult;
 }
@@ -49,10 +35,9 @@ function addNoteFunction(){
 	let noteDelButton = document.createElement("INPUT");
 	let noteSaveButton = document.createElement("INPUT");
 	let noteP = document.createElement("P");
-	
-	//let textNode = document.createTextNode( "This is a paragraph");
 	let noteLi = document.createElement("LI");
 	noteLi.setAttribute("id", i);
+
 	/*Note Title is a textarea*/
 	noteTitle.setAttribute("type", "textarea");
 	noteTitle.setAttribute("value", i);
@@ -63,6 +48,7 @@ function addNoteFunction(){
 	noteOpenButton.setAttribute("value", "open");
 	noteOpenButton.setAttribute("id", "noteOpenButton"+i);
 	noteOpenButton.addEventListener("click", openText);
+	
 
 	/*Note delete button for removing a note from list*/
 	noteDelButton.setAttribute("type", "button");
@@ -98,7 +84,6 @@ function openText(e) {
 	let noteText = e.target.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML;
 	document.getElementById("content").value = noteText;
 
-
 }
 
 function deleteSelf(e) {
@@ -121,7 +106,6 @@ let shortDate = function(){
 	return today.getMonth() + '/' + today.getDate() + '/' + today.getFullYear();
 }
 
-//addNoteFunction();
 
 console.log(shortDate());
 
